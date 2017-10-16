@@ -1,11 +1,11 @@
 ﻿using System;
 using BilibiliDM_PluginFramework;
 
-namespace ShowUID
+namespace AddUID
 {
-    public class ShowUID : DMPlugin
+    public class AddUID : DMPlugin
     {
-        public ShowUID()
+        public AddUID()
         {
             ReceivedDanmaku += B_ReceivedDanmaku;
             PluginAuth = "lzblzr";

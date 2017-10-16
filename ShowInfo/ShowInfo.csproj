@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16963E13-5741-4B7E-8295-A4706A0D9542}</ProjectGuid>
+    <ProjectGuid>{30D14085-4D54-4A80-B59B-9881EE1DFF66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShowUID</RootNamespace>
-    <AssemblyName>ShowUID</AssemblyName>
+    <RootNamespace>ShowInfo</RootNamespace>
+    <AssemblyName>ShowInfo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,10 +34,11 @@
       <HintPath>..\BilibiliDM_PluginFramework\BilibiliDM_PluginFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ShowUID.cs" />
+    <Compile Include="ShowInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

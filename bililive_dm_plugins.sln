@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowUID", "ShowUID\ShowUID.csproj", "{16963E13-5741-4B7E-8295-A4706A0D9542}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddUID", "AddUID\AddUID.csproj", "{16963E13-5741-4B7E-8295-A4706A0D9542}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldSilver", "GoldSilver\GoldSilver.csproj", "{1B1AAED6-3040-4E49-AAF5-AE144F7A277B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowInfo", "ShowInfo\ShowInfo.csproj", "{30D14085-4D54-4A80-B59B-9881EE1DFF66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1B1AAED6-3040-4E49-AAF5-AE144F7A277B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B1AAED6-3040-4E49-AAF5-AE144F7A277B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B1AAED6-3040-4E49-AAF5-AE144F7A277B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D14085-4D54-4A80-B59B-9881EE1DFF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D14085-4D54-4A80-B59B-9881EE1DFF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D14085-4D54-4A80-B59B-9881EE1DFF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D14085-4D54-4A80-B59B-9881EE1DFF66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
