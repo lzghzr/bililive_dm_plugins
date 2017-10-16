@@ -13,7 +13,7 @@ namespace ShowInfo
             PluginName = "用户信息";
             PluginDesc = "显示投喂用户的隐藏信息";
             PluginCont = "lzggzr@gmail.com";
-            PluginVer = "v1.0.0";
+            PluginVer = "v1.0.1";
         }
         private void B_ReceivedDanmaku(object sender, ReceivedDanmakuArgs e)
         {
@@ -51,7 +51,7 @@ namespace ShowInfo
                         userLog += String.Format(" {0}{1}", value, e.Danmaku.GiftName);
                 }
 
-                Regex normalCapsule = new Regex("\"normal\":{ \"coin\":\"?(\\d+)");
+                Regex normalCapsule = new Regex("\"normal\":{\"coin\":\"?(\\d+)");
                 Match hasNormalCapsule = normalCapsule.Match(rawData);
                 if (hasNormalCapsule.Success)
                 {
@@ -60,7 +60,7 @@ namespace ShowInfo
                         userLog += String.Format(" {0}普通扭蛋", value);
                 }
 
-                Regex colorfulCapsule = new Regex("\"colorful\":{ \"coin\":\"?(\\d+)");
+                Regex colorfulCapsule = new Regex("\"colorful\":{\"coin\":\"?(\\d+)");
                 Match hascClorfulCapsule = colorfulCapsule.Match(rawData);
                 if (hascClorfulCapsule.Success)
                 {
