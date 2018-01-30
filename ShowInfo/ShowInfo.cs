@@ -13,7 +13,7 @@ namespace ShowInfo
             PluginName = "用户信息";
             PluginDesc = "显示投喂用户的隐藏信息";
             PluginCont = "lzggzr@gmail.com";
-            PluginVer = "v1.0.1";
+            PluginVer = "v1.0.2";
         }
         private void B_ReceivedDanmaku(object sender, ReceivedDanmakuArgs e)
         {
@@ -24,7 +24,7 @@ namespace ShowInfo
                 string defaultLog;
                 string userLog = defaultLog = e.Danmaku.UserName + " 剩余";
 
-                Regex gold = new Regex("\"gold\":\"?(\\d+)");
+                Regex gold = new Regex("\"gold\":(\\d+)");
                 Match hasGold = gold.Match(rawData);
                 if (hasGold.Success)
                 {
@@ -33,7 +33,7 @@ namespace ShowInfo
                         userLog += String.Format(" {0}金瓜子", value);
                 }
 
-                Regex silver = new Regex("\"silver\":\"?(\\d+)");
+                Regex silver = new Regex("\"silver\":(\\d+)");
                 Match hasSilver = silver.Match(rawData);
                 if (hasSilver.Success)
                 {
@@ -42,7 +42,7 @@ namespace ShowInfo
                         userLog += String.Format(" {0}银瓜子", value);
                 }
 
-                Regex package = new Regex("\"eventNum\":\"?(\\d+)");
+                Regex package = new Regex("\"remain\":(\\d+)");
                 Match hasPackage = package.Match(rawData);
                 if (hasPackage.Success)
                 {
@@ -51,7 +51,7 @@ namespace ShowInfo
                         userLog += String.Format(" {0}{1}", value, e.Danmaku.GiftName);
                 }
 
-                Regex normalCapsule = new Regex("\"normal\":{\"coin\":\"?(\\d+)");
+                Regex normalCapsule = new Regex("\"normal\":{\"coin\":(\\d+)");
                 Match hasNormalCapsule = normalCapsule.Match(rawData);
                 if (hasNormalCapsule.Success)
                 {
@@ -60,7 +60,7 @@ namespace ShowInfo
                         userLog += String.Format(" {0}普通扭蛋", value);
                 }
 
-                Regex colorfulCapsule = new Regex("\"colorful\":{\"coin\":\"?(\\d+)");
+                Regex colorfulCapsule = new Regex("\"colorful\":{\"coin\":(\\d+)");
                 Match hascClorfulCapsule = colorfulCapsule.Match(rawData);
                 if (hascClorfulCapsule.Success)
                 {

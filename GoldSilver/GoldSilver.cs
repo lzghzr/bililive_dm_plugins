@@ -12,7 +12,7 @@ namespace GoldSilver
             PluginName = "金银礼物";
             PluginDesc = "在礼物后添加金银标识";
             PluginCont = "lzggzr@gmail.com";
-            PluginVer = "v1.0.0";
+            PluginVer = "v1.0.1";
             Start();
         }
         private void B_ReceivedDanmaku(object sender, ReceivedDanmakuArgs e)
@@ -20,9 +20,9 @@ namespace GoldSilver
             if (e.Danmaku.MsgType == MsgTypeEnum.GiftSend)
             {
                 string rawData = e.Danmaku.RawData;
-                bool isGold = rawData.Contains("\"silver\":\"");
-                bool isSilver = rawData.Contains("\"gold\":\"");
-                e.Danmaku.GiftName += string.Format("({0})", isGold ? "金" : isSilver ? "银" : "包");
+                bool isBag = (rawData.Contains("\"gold\":0,") && rawData.Contains("\"silver\":0,")) || !rawData.Contains("\"remain\":0,");
+                bool isSilver = rawData.Contains("\"giftId\":1,");
+                e.Danmaku.GiftName += string.Format("({0})", isBag ? "包" : isSilver ? "银" : "金");
             }
         }
         public override void Admin()
